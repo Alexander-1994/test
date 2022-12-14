@@ -1,0 +1,123 @@
+.header {
+    height: 336px;
+    background-color: #e9e3d9;
+    &__language {
+        width: 104px;
+        height: 40.73px;
+        display: flex;
+        align-items: flex-start;
+        position: relative;
+        &-en, &-ru {
+            width: 52px;
+            height: 32px;
+            font-weight: 400;
+            font-size: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff;
+            cursor: pointer;
+        }
+        &-en {
+            background-color: #746B60;
+            color: #ffffff;
+        }
+        &-ru::after {
+            content: '';
+            position: absolute;
+            top: 32px;
+            left: 0;
+            border: 4.4px solid transparent;
+            border-left: 4.85px solid #fff;
+            border-top: 4.2px solid #fff;
+        }
+    }
+    &__wrapper {
+        margin-top: 56.27px;
+        height: 141px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    &__logo {
+        display: block;
+        width: 274.69px;
+        height: 128px;
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 953px;
+        height: inherit;
+        &-top {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    &__social {
+        width: 233px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__switch-mode {
+        position: relative;
+        width: 285px;
+        cursor: pointer;
+        img {
+            position: absolute;
+            top: 5px;
+            left: -7px;
+        }
+        span {
+            display: block;
+            text-align: right;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 180%;
+            text-transform: uppercase;
+            color: #2A2926;
+        }
+    }
+    &__menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &-links {
+            padding: 0;
+            margin: 0;
+            width: 832px;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        li {
+            display: flex;
+            align-items: center;
+        }
+        &-link {
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            text-transform: uppercase;
+            color: #2A2926;
+            max-width: 200px;
+            &-down {
+                margin-left: 12px;
+                cursor: pointer;
+                display: none;
+            }
+            &:hover {
+                color: #C56C1A;
+            } 
+        }
+    }
+}
+
+.active {
+    color: #C56C1A;
+    text-decoration: underline;
+}

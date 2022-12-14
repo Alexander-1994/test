@@ -1,0 +1,79 @@
+.slider {
+    height: 975px;
+    background-color: #e9e3d9;
+    overflow: hidden;
+    position: relative;
+    &__wrapper {
+        max-width: 1920px;
+        max-height: 616px;
+        margin: 0 auto;
+        
+    }
+    &__title {
+        font-weight: 600;
+        font-size: 76px;
+        line-height: 100%;
+        position: absolute;
+        top: -119px;
+        left: -1px;
+        text-align: left;
+        margin: 0;
+    }
+    &__descr {
+        position: relative;
+        width: 548px;
+        height: 245px;
+        background-image: url('../../img/message.png');
+        padding: 50px;
+        padding-top: 73px;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 180%;
+        color: #000000;
+        text-align: left;
+        position: absolute;
+        bottom: -194px;
+        left: 288px;
+    }
+    &__detail {
+        position: absolute;
+        bottom: -53px;
+        left: 51px;
+        width: 195px;
+        height: 52px;
+        background: #F7F3EA;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 180%;
+        text-transform: uppercase;
+        color: #C56C1A;
+        padding: 11.5px 40px;
+        cursor: pointer;
+    }
+    &__left {
+        position: absolute;
+        bottom: 121px;
+        left: 203px;
+    }
+    &__right {
+        position: absolute;
+        bottom: 121px;
+        right: 203px;
+    }
+}
+
+.description {
+    width: 672px;
+    height: 159px;
+    margin: 87px 0 0 auto;
+    &__text {
+        margin: 0;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 180%;
+        color: #000000;
+    }
+    &__btn {
+        margin-top: 35px;
+    }
+}

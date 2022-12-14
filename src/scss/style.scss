@@ -1,0 +1,16 @@
+@import 'libs/reset.min';
+@import 'libs/fonts';
+@import 'libs/bootstrap.min';
+
+body {
+    font-family: 'Bitter', serif;
+}
+
+.container-box {
+    width: 1345px;
+    margin: 0 auto;
+}
+
+@import 'blocks/header';
+@import 'blocks/slider';
+@import 'blocks/buttons';
