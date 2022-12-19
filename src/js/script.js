@@ -4,9 +4,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const links = document.querySelectorAll('.header__menu-link'),
           linksParrent = document.querySelector('.header__menu-links'),
           arrowDown = document.querySelector('.header__menu-link-down'),
-          slider = document.querySelector('.slider__wrapper'),
-          slides = document.querySelectorAll('.carousel-item');
+          sliderWrapper = document.querySelector('.slider__wrapper'),
+          slides = document.querySelectorAll('.carousel-item'),
+          menuBtn = document.querySelector('.header__menu-click'),
+          slider = document.querySelector('.slider'),
+          header = document.querySelector('.header'),
+          bit = document.querySelector('.header__menu-bit');
     
+    menuBtn.addEventListener('click', () => {
+        slider.classList.toggle('translate');
+        header.classList.toggle('translate');
+        document.body.classList.toggle('active-menu');
+        bit.classList.toggle('show');
+    })
+
     const deleteActive = items => {
         items.forEach(elem => {
             elem.classList.remove('active')
@@ -26,6 +37,13 @@ document.addEventListener('DOMContentLoaded', () => {
             if (elem === e.target) {
                 deleteActive(links);
                 createActive(links, i);
+
+                if (document.body.classList.contains('active-menu')) {
+                    slider.classList.toggle('translate');
+                    header.classList.toggle('translate');
+                    document.body.classList.toggle('active-menu');
+                    bit.classList.toggle('show');
+                }
             } 
         })
     })
@@ -59,10 +77,10 @@ document.addEventListener('DOMContentLoaded', () => {
     detail.classList.add('slider__detail');
     detail.innerHTML = `подробнее →`;
 
-    slider.append(descr);
+    sliderWrapper.append(descr);
     descr.append(detail);
 
-    slider.addEventListener('click', () => {
+    sliderWrapper.addEventListener('click', () => {
         slides.forEach((slide, i) => {
             if (slide.classList.contains('active')) {
                 descr.innerHTML = `${descrArr[i]}`

@@ -65,10 +65,10 @@
         position: relative;
         width: 285px;
         cursor: pointer;
-        img {
+        svg {
             position: absolute;
             top: 5px;
-            left: -7px;
+            left: -5px;
         }
         span {
             display: block;
@@ -114,6 +114,9 @@
                 color: #C56C1A;
             } 
         }
+    }
+    &__loupe {
+        cursor: pointer;
     }
 }
 

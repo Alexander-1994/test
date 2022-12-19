@@ -14,3 +14,15 @@ body {
 @import 'blocks/header';
 @import 'blocks/slider';
 @import 'blocks/buttons';
+@import 'media';
+
+.translate {
+    transform: translateX(270px);
+}
+.active-menu {
+    overflow: hidden;
+    background-color: #F6F3EA;
+}
+.show {
+    display: block !important;
+}
